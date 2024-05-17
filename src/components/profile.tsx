@@ -12,7 +12,7 @@ const AddressButton = () => {
   const connect = async () => {
     try {
       const response = await request('getAccounts', {
-        purposes: [AddressPurpose.Payment, AddressPurpose.Ordinals, AddressPurpose.Stacks],
+        purposes: [AddressPurpose.Payment, AddressPurpose.Ordinals],
         message: 'Cool app wants to know your addresses!',
       });
       console.log("getAccounts ~ response:", response)
